@@ -1,0 +1,9 @@
+<div class="app-page__header">
+    <h1>Eliminar Asociacion</h1>
+  </div>
+  <div class="wrapper">
+      <p>Desea eliminar la asociación {{data.nombre}}?</p>
+      <app-button-danger type="button" (click)="this.dialog.close(true)">Eliminar</app-button-danger>
+      <app-button type="button" (click)="this.dialog.close(false)">Cancelar</app-button>
+  </div>
+  

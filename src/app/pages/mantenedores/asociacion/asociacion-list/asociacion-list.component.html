@@ -1,0 +1,35 @@
+<div class="app-page">
+  <div class="app-page__header">
+    <h1>Crear Asociacion</h1>
+  </div>
+  <div class="wrapper">
+    <app-form-field label="Ingrese la Asociacion a buscar: " [isInline]="false">
+      <app-input [(ngModel)]="filtro"></app-input>
+    </app-form-field>
+    <table class="app-table">
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
+      </tr>
+      <tr *ngFor="let asociacion of (asociaciones | filtroAsociacion:filtro)">
+        <td>{{ asociacion.asociacion_id }}</td>
+        <td>{{ asociacion.nombre }}</td>
+        <td>
+          <mat-icon class="app-icon" (click)="editAsociacion(asociacion)"
+            >edit</mat-icon
+          >
+        </td>
+        <td>
+          <mat-icon class="app-icon" (click)="deleteAsociacion(asociacion)"
+            >delete</mat-icon
+          >
+        </td>
+      </tr>
+    </table>
+    <app-button routerLink="/mantenedores/asociacion/crear"
+      >Nueva Asociacion</app-button
+    >
+  </div>
+</div>

@@ -1,0 +1,12 @@
+.app-icon {
+  min-width: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: $primary;
+
+  &:hover {
+    color: $primary-light;
+  }
+}

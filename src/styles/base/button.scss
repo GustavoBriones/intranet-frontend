@@ -1,0 +1,34 @@
+.app-button {
+  padding: 8px 20px;
+  background: transparent;
+  border-radius: 10px;
+  border: 2px solid $primary;
+  transition: 0.25s;
+  margin: 10px 0;
+  width: 100%;
+
+  &:hover,
+  &:focus {
+    background: $primary;
+    border: 2px solid $primary;
+    color: $on-primary;
+  }
+}
+
+.app-button-danger {
+  padding: 8px 20px;
+  background: transparent;
+  border-radius: 10px;
+  border: 2px solid red;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: 0.25s;
+  margin: 10px 0;
+  width: 100%;
+
+  &:hover,
+  &:focus {
+    background: red;
+    border: 2px solid red;
+    color: $on-primary;
+  }
+}

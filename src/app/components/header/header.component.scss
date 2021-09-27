@@ -1,0 +1,40 @@
+@import "styles/colors";
+
+.header {
+  height: 60px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  background-color: $primary;
+
+  &__title {
+    font-size: 1.2em;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    cursor: pointer;
+    color: white;
+  }
+
+  &__navigation {
+    display: inline-flex;
+    align-items: center;
+    text-transform: capitalize;
+  }
+}
+
+.estiloIcon {
+  cursor: pointer;
+  margin-right: 15px;
+  color: black;
+}
+
+.estiloIcon:hover {
+  color: $secondary;
+}
+
+.app-a {
+  margin-left: 1em;
+  margin-right: 0;
+}

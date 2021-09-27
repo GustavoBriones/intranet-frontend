@@ -1,0 +1,16 @@
+.navigation-list-label {
+  display: inline-block;
+  padding-left: 6px;
+
+  &__sub-menu {
+    padding-left: 50px;
+  }
+}
+
+.menu-button {
+  transition: 300ms ease-in-out;
+  transform: rotate(0deg);
+}
+.menu-button.rotated {
+  transform: rotate(180deg);
+}

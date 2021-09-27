@@ -1,0 +1,64 @@
+<div class="app-page">
+  <div class="app-page__header">
+    <h1>Registrar</h1>
+  </div>
+  <div class="wrapper">
+    <app-spinner *ngIf="showSpinner"></app-spinner>
+    <form
+      [formGroup]="form"
+      autocomplete="off"
+      novalidate
+      (ngSubmit)="registroOn()"
+    >
+      <app-form-field
+        label="Email"
+        [isInline]="isInline"
+        [required]="true"
+        [control]="form.controls.email"
+      >
+        <app-input formControlName="email"></app-input>
+      </app-form-field>
+      <app-form-field
+        label="Username"
+        [isInline]="isInline"
+        [required]="true"
+        [control]="form.controls.username"
+      >
+        <app-input formControlName="username"></app-input>
+      </app-form-field>
+      <app-form-field
+        label="Nombre"
+        [isInline]="isInline"
+        [required]="true"
+        [control]="form.controls.nombre"
+      >
+        <app-input formControlName="nombre"></app-input>
+      </app-form-field>
+      <app-form-field
+        label="Apellidos"
+        [isInline]="isInline"
+        [required]="true"
+        [control]="form.controls.apellidos"
+      >
+        <app-input formControlName="apellidos"></app-input>
+      </app-form-field>
+      <app-form-field
+        label="Contraseña"
+        [isInline]="isInline"
+        [required]="true"
+        [control]="form.controls.password"
+      >
+        <app-password formControlName="password"></app-password>
+      </app-form-field>
+      <app-form-field
+        label="Reingrese Contraseña"
+        [isInline]="isInline"
+        [required]="true"
+        [control]="form.controls.passwordRepeat"
+      >
+        <app-password formControlName="passwordRepeat"></app-password>
+      </app-form-field>
+      <app-button type="submit">Registrar</app-button>
+    </form>
+  </div>
+</div>

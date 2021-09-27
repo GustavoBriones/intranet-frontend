@@ -1,0 +1,33 @@
+<div class="app-page">
+  <div class="app-page__header">
+    <h1>Login</h1>
+  </div>
+  <div class="wrapper">
+    <app-spinner *ngIf="showSpinner"></app-spinner>
+    <form
+      [formGroup]="form"
+      autocomplete="off"
+      (ngSubmit)="loginOn()"
+      novalidate
+    >
+      <app-form-field
+        label="Username"
+        [required]="true"
+        [control]="form.controls.username"
+        [isInline]="isInline"
+      >
+        <app-input formControlName="username"></app-input>
+      </app-form-field>
+      <app-form-field
+        label="Contraseña"
+        [required]="true"
+        [control]="form.controls.password"
+        [isInline]="isInline"
+      >
+        <app-password formControlName="password"></app-password>
+      </app-form-field>
+      <app-button type="submit">Ingresar</app-button>
+    </form>
+    <p>No tienes cuenta? Registrate <a routerLink="/auth/registro">aquí</a></p>
+  </div>
+</div>

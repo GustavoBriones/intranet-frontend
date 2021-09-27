@@ -1,0 +1,12 @@
+@import "colors";
+
+@mixin shadow {
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+}
+
+@mixin card {
+  padding: 32px;
+  background: $base;
+  border-radius: 8px;
+  @include shadow;
+}
